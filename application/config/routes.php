@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route["giris"]     = "users/login_form";
 $route["giris-yap"] = "users/login";
+$route["anasayfa/(:any)"] = "home/homepage/$1";
