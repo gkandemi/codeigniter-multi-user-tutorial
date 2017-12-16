@@ -44,8 +44,26 @@ class Users extends CI_Controller {
                 )
             );
 
-            print_r($user);
+            if($user){
 
+                if($this->session->userdata("user_list")){
+                    $user_list = $this->session->userdata("user_list");
+                } else {
+                    $user_list = [];
+                }
+
+                $user_list[$user->email] = $user;
+
+                $this->session->set_userdata("user_list", $user_list);
+
+                print_r($user_list);
+
+            } else {
+
+
+                $this->load->view("login_v");
+
+            }
 
         }
 
