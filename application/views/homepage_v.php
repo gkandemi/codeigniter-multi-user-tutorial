@@ -49,27 +49,14 @@
                     <th>Ürün Adı</th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>#1</td>
-                        <td>Monitör</td>
-                    </tr>
-                    <tr>
-                        <td>#1</td>
-                        <td>Monitör</td>
-                    </tr>
-                    <tr>
-                        <td>#1</td>
-                        <td>Monitör</td>
-                    </tr>
-                    <tr>
-                        <td>#1</td>
-                        <td>Monitör</td>
-                    </tr>
-                    <tr>
-                        <td>#1</td>
-                        <td>Monitör</td>
-                    </tr>
+                    <?php foreach ($products as $product){ ?>
 
+                        <tr>
+                            <td>#<?php echo $product->id; ?></td>
+                            <td><?php echo $product->product_name; ?></td>
+                        </tr>
+
+                    <?php } ?>
                 </tbody>
             </table>
 
