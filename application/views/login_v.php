@@ -17,11 +17,18 @@
                 <div class="form-group">
                     <label>E-posta Adresiniz</label>
                     <input type="email" name="eposta" class="form-control" placeholder="E-posta">
+                    <?php if(isset($form_error)) { ?>
+                        <small class="pull-right"><?php echo form_error("eposta"); ?></small>
+                    <?php } ?>
                 </div>
                 <div class="form-group">
                     <label>Şifre</label>
                     <input type="password" name="sifre" class="form-control" placeholder="Şifre">
+                    <?php if(isset($form_error)) { ?>
+                        <small class="pull-right"><?php echo form_error("sifre"); ?></small>
+                    <?php } ?>
                 </div>
+                <hr>
                 <button type="submit" class="btn btn-primary btn-block">Giriş</button>
             </form>
 
