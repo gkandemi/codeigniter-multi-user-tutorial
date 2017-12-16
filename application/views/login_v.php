@@ -13,7 +13,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 well col-md-offset-3">
-            <form action="<?php echo base_url("giris-yap"); ?>">
+            <form action="<?php echo base_url("giris-yap"); ?>" method="post">
                 <div class="form-group">
                     <label>E-posta Adresiniz</label>
                     <input type="email" name="eposta" class="form-control" placeholder="E-posta">
